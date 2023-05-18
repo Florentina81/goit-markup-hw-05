@@ -9,6 +9,7 @@
   --main-second-backround-clr: #f5f4fa;
   --social-icons-clr: #afb1b8;
   --primary-clr: #fff;
+  --transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 body {
@@ -265,6 +266,7 @@ a {
 .request-button:focus {
   background: var(--primary-clr);
   color: #000000;
+  transition: var(--transition);
 }
 
 .second-section {
@@ -297,4 +299,61 @@ a {
   height: 120px;
   border-radius: 4px;
   margin-bottom: 30px;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.2);
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 1;
+  transition: transform var(--transition);
+}
+.modal-content {
+  background-color: var(--primary-clr);
+  margin: 0 auto;
+  position: relative;
+  padding: 16px;
+  width: 528px;
+  height: 581px;
+  left: 536px;
+  top: 221px;
+  display: flex;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.is-hidden {
+  visibility: hidden;
+  transform: scale(1.1);
+}
+
+.close-btn {
+  cursor: pointer;
+  outline: none;
+  position: absolute;
+  right: 16px;
+  top: 16px;
+  transition: var(--transition);
+  color: #000000;
+  background-color: var(--primary-clr);
+  border: 1px solid #0000001a;
+  border-radius: 15px;
+  width: 30px;
+  height: 30px;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+  background-color: var(--third-clr);
 }

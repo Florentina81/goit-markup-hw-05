@@ -48,6 +48,11 @@ ul {
   list-style-type: none;
 }
 
+a {
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 .section {
   margin: auto;
   width: 1600px;
@@ -100,6 +105,18 @@ ul {
   border-radius: 2px;
 }
 
+.active:hover::after,
+.active:focus::after {
+  content: "";
+  position: absolute;
+  height: 4px;
+  width: 100%;
+  background-color: var(--third-clr);
+  top: 46px;
+  left: 0;
+  border-radius: 2px;
+}
+
 .main-navigation {
   display: flex;
   justify-content: space-between;
@@ -124,25 +141,13 @@ ul {
   outline: 0;
 }
 
-.active-item-filter {
-  position: relative;
-}
-
 .logo-container .home-button:hover,
 .logo-container .home-button:focus {
   color: var(--third-clr);
 }
 
-.active:hover::after,
-.active:focus::after {
-  content: "";
-  position: absolute;
-  height: 4px;
-  width: 100%;
-  background-color: var(--third-clr);
-  top: 46px;
-  left: 0;
-  border-radius: 2px;
+.active {
+  position: relative;
 }
 
 .super-nav-class {
