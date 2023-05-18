@@ -124,7 +124,7 @@ ul {
   outline: 0;
 }
 
-.active {
+.active-item-filter {
   position: relative;
 }
 
@@ -264,7 +264,7 @@ ul {
   color: var(--primary-clr);
 }
 
-.active-item {
+.active-item-filter {
   background-color: var(--third-clr);
 }
 .category-flex {
@@ -405,4 +405,112 @@ address a:focus {
   background-color: var(--third-clr);
   border-radius: 50%;
   outline: 0;
+}
+
+.category-flex li:hover .portfolio-overlay {
+  top: 0;
+}
+
+.item:hover .overlay {
+  top: 0;
+}
+
+.item {
+  position: relative;
+  overflow: hidden;
+}
+
+.item .overlay {
+  padding: 0;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+  transition-property: top, right, bottom, left;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  background: rgba(33, 150, 243, 0.9);
+  top: 100%;
+}
+
+.item .text {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  font-family: var(--text-font-family);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.55;
+  color: var(--primary-clr);
+  letter-spacing: 0.03em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%, -50%);
+}
+
+/* MODAL */
+
+.modal {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.2);
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 1;
+  transition: var(--transition);
+}
+
+.modal-content {
+  display: flex;
+  position: relative;
+  background: #fff;
+  height: 581px;
+  width: 528px;
+  margin: 0 auto;
+}
+.inside-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.close-btn {
+  font-size: 20px;
+  outline: none;
+  cursor: pointer;
+  color: #000;
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  position: absolute;
+  top: 8px;
+  right: 8px;
+}
+.close-btn:hover,
+.close-btn:focus {
+  background: #000;
+  color: #fff;
+}
+
+.is-hidden {
+  opacity: 0;
+  visibility: hidden;
 }

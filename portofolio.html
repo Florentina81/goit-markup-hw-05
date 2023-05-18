@@ -54,10 +54,14 @@
         <section class="filter-buttons">
           <div class="container">
             <ul class="filter-section-button filter-section-flex">
-              <li><button type="button" class="active-item">All</button></li>
-              <li><button type="button" class="item">Web-sites</button></li>
-              <li><button type="button" class="item">Apps</button></li>
-              <li><button type="button" class="item">Design</button></li>
+              <li>
+                <button type="button" class="active-item-filter">All</button>
+              </li>
+              <li>
+                <button type="button" class="item-filter">Web-sites</button>
+              </li>
+              <li><button type="button" class="item-filter">Apps</button></li>
+              <li><button type="button" class="item-filter">Design</button></li>
               <li>
                 <button type="button" class="item last">Marketing</button>
               </li>
@@ -67,7 +71,16 @@
         <div class="container">
           <ul class="category-flex">
             <li>
-              <img src="./img/img2/img(1).jpg" alt="Laptop" width="370px" />
+              <div class="item">
+                <img src="./img/img2/img(1).jpg" alt="Laptop" width="370px" />
+                <div class="overlay">
+                  <p class="text">
+                    Technoduck is a state-of-the-art coronavirus distribution
+                    platform. Companies use this platform for digital espionage
+                    and attacks on competitors' secure servers.
+                  </p>
+                </div>
+              </div>
               <div class="filter-item">
                 <p>Technoduck</p>
                 <em>Web-site</em>
@@ -79,6 +92,7 @@
                 alt="Basketball Players"
                 width="370px"
               />
+
               <div class="filter-item">
                 <p>Poster New Orlean vs Golden Star</p>
                 <em>Design</em>
@@ -204,5 +218,14 @@
         </div>
       </div>
     </footer>
+
+    <div class="modal is-hidden" data-modal>
+      <div class="modal-content">
+        <button class="close-btn" data-modal-close>&times;</button>
+        <div class="inside-content">Continutul modalului</div>
+      </div>
+    </div>
+
+    <script src="./css/form.js" type="text/Javascript"></script>
   </body>
 </html>
